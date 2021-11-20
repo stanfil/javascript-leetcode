@@ -1,27 +1,3 @@
-const binarySearch = require('./binarySearch')
-
-const arr = new Array(100).fill(0).map(() => Math.round(Math.random() * 100)).sort((a, b) => a - b)
-
-console.log(arr)
-const target = Math.round(Math.random() * 100)
-console.log('target', target)
-const result = binarySearch(arr, target)
-console.log('result', arr[result])
-
-function check (result) {
-  let index = -1
-  for (let i of arr) {
-    if (arr[i] === target) {
-      index = i
-      console.log(target, arr[i])
-      break
-    }
-  }
-  const flag = result === index
-  return flag
-}
-
-console.log(check(result) ? 'success' : 'fail')
 ## 前端食堂的 LeetCode 题解仓库
 
 [![](https://img.shields.io/badge/WeChat-微信群-brightgreen)](#交流)
